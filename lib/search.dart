@@ -2,6 +2,73 @@ import 'package:flutter/material.dart';
 import 'items/movieCard.dart';
 
 class Search extends StatelessWidget {
+  final List<Widget> movies = [
+    MovieCard(
+      movieName: 'AAAAAAAAAAAAAAAAAAAAAAA',
+      imgName: 'castle',
+    ),
+    MovieCard(
+      movieName: 'Rick and Morty',
+      imgName: 'rick',
+    ),
+    MovieCard(
+      movieName: 'Castlevania',
+      imgName: 'castle',
+    ),
+    MovieCard(
+      movieName: 'Rick and Morty',
+      imgName: 'rick',
+    ),
+    MovieCard(
+      movieName: 'Castlevania',
+      imgName: 'castle',
+    ),
+    MovieCard(
+      movieName: 'Rick and Morty',
+      imgName: 'rick',
+    ),
+    MovieCard(
+      movieName: 'Castlevania',
+      imgName: 'castle',
+    ),
+    MovieCard(
+      movieName: 'Rick and Morty',
+      imgName: 'rick',
+    ),
+    MovieCard(
+      movieName: 'Castlevania',
+      imgName: 'castle',
+    ),
+    MovieCard(
+      movieName: 'Rick and Morty',
+      imgName: 'rick',
+    ),
+    MovieCard(
+      movieName: 'Castlevania',
+      imgName: 'castle',
+    ),
+    MovieCard(
+      movieName: 'Rick and Morty',
+      imgName: 'rick',
+    ),
+    MovieCard(
+      movieName: 'Castlevania',
+      imgName: 'castle',
+    ),
+    MovieCard(
+      movieName: 'Rick and Morty',
+      imgName: 'rick',
+    ),
+    MovieCard(
+      movieName: 'Castlevania',
+      imgName: 'castle',
+    ),
+    MovieCard(
+      movieName: 'Rick and Morty',
+      imgName: 'rick',
+    )
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -15,30 +82,25 @@ class Search extends StatelessWidget {
                 width: 500,
                 height: 40,
                 child: Stack(
-                  alignment: Alignment(-0.97, 0.16),
+                  alignment: Alignment.centerLeft,
                   children: <Widget>[
                     TextField(
                       decoration: InputDecoration(
-                          border: InputBorder.none,
-                          filled: true,
-                          fillColor: Colors.grey[800],
-                          labelText:
-                              '       Busque por série, filme, gênero, etc.',
-                          labelStyle: TextStyle(fontSize: 17)),
-                    ),
-                    Icon(
-                      Icons.search,
-                      color: Colors.grey[600],
-                      size: 30,
-                    ),
-                    Align(
-                      alignment: Alignment(1.1, 0),
-                      child: FlatButton(
-                        splashColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                        child:
-                            Icon(Icons.mic, color: Colors.grey[600], size: 30),
-                        onPressed: () {},
+                        border: InputBorder.none,
+                        prefixIcon: Icon(
+                          Icons.search,
+                          color: Colors.grey[600],
+                          size: 30,
+                        ),
+                        filled: true,
+                        fillColor: Colors.grey[800],
+                        hintText: 'Busque por série, filme, gênero, etc.',
+                        hintStyle: TextStyle(fontSize: 17),
+                        suffixIcon: GestureDetector(
+                          child: Icon(Icons.mic,
+                              color: Colors.grey[600], size: 30),
+                          onTap: () {},
+                        ),
                       ),
                     ),
                   ],
@@ -50,19 +112,21 @@ class Search extends StatelessWidget {
         Row(
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.only(left: 10, top: 7, bottom: 10),
-              child: Text('Talvez você goste', style: TextStyle(fontSize: 25)),
+              padding: EdgeInsets.only(left: 10, top: 12, bottom: 12),
+              child: Text('Talvez você goste', style: TextStyle(fontSize: 22)),
             ),
           ],
         ),
-        MovieCard(
-          movieName: 'Castlevania',
-          imgName: 'castle',
-        ),
-        MovieCard(
-          movieName: 'Rick and Morty',
-          imgName: 'rick',
-        ),
+        Expanded(
+          child: ListView.separated(
+              padding: const EdgeInsets.only(bottom: 8),
+              separatorBuilder: (context, index) => Divider(
+                    color: Colors.black,
+                    height: 2,
+                  ),
+              itemCount: movies.length,
+              itemBuilder: (context, index) => movies[index]),
+        )
       ],
     );
   }

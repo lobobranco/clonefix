@@ -13,33 +13,45 @@ class MovieCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 70,
+      width: MediaQuery.of(context).size.width,
       color: Colors.grey[850],
       child: Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Image.asset(
-            'assets/$imgName.png',
-            height: 70,
-            width: 140,
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 10),
-            child: Text(
-              "$movieName",
-              style: TextStyle(fontSize: 18),
+          Container(
+            child: Row(
+              children: <Widget>[
+                Image.asset(
+                  'assets/$imgName.png',
+                  height: 70,
+                  width: 140,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 10),
+                  child: Text(
+                    "$movieName",
+                    style: TextStyle(color: Colors.white, fontSize: 15),
+                    maxLines: 2,
+                    overflow: TextOverflow.clip,
+                  ),
+                ),
+              ],
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(left: 10),
-            child: FlatButton(
-              splashColor: Colors.transparent,
-              highlightColor: Colors.transparent,
-              onPressed: () {},
-              child: Icon(
-                Icons.play_arrow,
-                size: 35,
-              ),
-            ),
-          ),
+          Row(
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(right: 20),
+                // color: Colors.green,
+                child: Icon(
+                  Icons.play_arrow,
+                  size: 30,
+                ),
+              )
+            ],
+          )
         ],
       ),
     );
