@@ -21,35 +21,42 @@ class MovieCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Container(
-            child: Row(
-              children: <Widget>[
-                Image.asset(
-                  'assets/$imgName.png',
-                  height: 70,
-                  width: 140,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 10),
-                  child: Text(
-                    "$movieName",
-                    style: TextStyle(color: Colors.white, fontSize: 15),
-                    maxLines: 2,
-                    overflow: TextOverflow.clip,
+            child: Expanded(
+              child: Row(
+                children: <Widget>[
+                  Image.asset(
+                    'assets/$imgName.png',
+                    height: 70,
+                    width: 140,
                   ),
-                ),
-              ],
+                  Flexible(
+                    fit: FlexFit.loose,
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 10),
+                      child: Text(
+                        "$movieName",
+                        style: TextStyle(color: Colors.white, fontSize: 15),
+                        maxLines: 2,
+                        overflow: TextOverflow.clip,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Row(
             children: <Widget>[
               Container(
                 margin: EdgeInsets.only(right: 20),
-                // color: Colors.green,
-                child: Icon(
-                  Icons.play_arrow,
-                  size: 30,
+                child: GestureDetector(
+                  child: Icon(
+                    Icons.play_arrow,
+                    size: 30,
+                  ),
+                  onTap: () {},
                 ),
-              )
+              ),
             ],
           )
         ],

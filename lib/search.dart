@@ -4,8 +4,8 @@ import 'items/movieCard.dart';
 class Search extends StatelessWidget {
   final List<Widget> movies = [
     MovieCard(
-      movieName: 'AAAAAAAAAAAAAAAAAAAAAAA',
-      imgName: 'castle',
+      movieName: 'Algum filme ai do Harry Brother com o Harry Brother',
+      imgName: 'hp',
     ),
     MovieCard(
       movieName: 'Rick and Morty',
@@ -16,57 +16,37 @@ class Search extends StatelessWidget {
       imgName: 'castle',
     ),
     MovieCard(
-      movieName: 'Rick and Morty',
-      imgName: 'rick',
+      movieName: 'The Witcher',
+      imgName: 'witcher',
     ),
     MovieCard(
-      movieName: 'Castlevania',
-      imgName: 'castle',
+      movieName: 'Avatar - A Lenda de Aang',
+      imgName: 'avatar',
     ),
     MovieCard(
-      movieName: 'Rick and Morty',
-      imgName: 'rick',
+      movieName: 'Dark',
+      imgName: 'dark',
     ),
     MovieCard(
-      movieName: 'Castlevania',
-      imgName: 'castle',
+      movieName: 'Breaking Bad',
+      imgName: 'bb',
     ),
     MovieCard(
-      movieName: 'Rick and Morty',
-      imgName: 'rick',
+      movieName: 'Vikings',
+      imgName: 'vikings',
     ),
     MovieCard(
-      movieName: 'Castlevania',
-      imgName: 'castle',
+      movieName: 'O Mundo Sombrio de Sabrina',
+      imgName: 'sabrina',
     ),
     MovieCard(
-      movieName: 'Rick and Morty',
-      imgName: 'rick',
+      movieName: 'Stranger Things',
+      imgName: 'st',
     ),
     MovieCard(
-      movieName: 'Castlevania',
-      imgName: 'castle',
+      movieName: 'Sex Education',
+      imgName: 'sex',
     ),
-    MovieCard(
-      movieName: 'Rick and Morty',
-      imgName: 'rick',
-    ),
-    MovieCard(
-      movieName: 'Castlevania',
-      imgName: 'castle',
-    ),
-    MovieCard(
-      movieName: 'Rick and Morty',
-      imgName: 'rick',
-    ),
-    MovieCard(
-      movieName: 'Castlevania',
-      imgName: 'castle',
-    ),
-    MovieCard(
-      movieName: 'Rick and Morty',
-      imgName: 'rick',
-    )
   ];
 
   @override
