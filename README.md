@@ -1,6 +1,6 @@
-# clonefix
+# Clonefix
 
-A new Flutter project.
+Little project, just a clone of Netflix App.
 
 ## Getting Started
 
