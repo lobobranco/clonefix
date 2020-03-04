@@ -106,7 +106,7 @@ class Search extends StatelessWidget {
                   ),
               itemCount: movies.length,
               itemBuilder: (context, index) => movies[index]),
-        )
+        ),
       ],
     );
   }

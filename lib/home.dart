@@ -111,7 +111,7 @@ class Home extends StatelessWidget {
         ),
         Container(
           child: Padding(
-            padding: EdgeInsets.only(top: 480),
+            padding: EdgeInsets.only(left: 10, top: 480),
             child: Text('Prévias'),
           ),
         ),
@@ -119,8 +119,9 @@ class Home extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.only(top: 350),
             child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(children: <Widget>[
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: <Widget>[
                   MovieCircle(imgName: 'avatar2'),
                   MovieCircle(imgName: 'bb2'),
                   MovieCircle(imgName: 'castle2'),
@@ -132,7 +133,63 @@ class Home extends StatelessWidget {
                   MovieCircle(imgName: 'st2'),
                   MovieCircle(imgName: 'vikings2'),
                   MovieCircle(imgName: 'witcher2'),
-                ])),
+                ],
+              ),
+            ),
+          ),
+        ),
+        Container(
+          child: Padding(
+            padding: EdgeInsets.only(left: 10, top: 610),
+            child: Text('Séries para Maratonar'),
+          ),
+        ),
+        Center(
+          child: Padding(
+            padding: EdgeInsets.only(top: 630),
+            child: GridView.count(
+              primary: false,
+              padding: EdgeInsets.all(8),
+              crossAxisSpacing: 5,
+              mainAxisSpacing: 1,
+              crossAxisCount: 3,
+              childAspectRatio: (75 / 150),
+              children: <Widget>[
+                Container(
+                  width: 300,
+                  height: 500,
+                  padding: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      fit: BoxFit.fill,
+                      image: ExactAssetImage('assets/bojack.png'),
+                    ),
+                  ),
+                ),
+                Container(
+                  width: 300,
+                  height: 500,
+                  padding: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      fit: BoxFit.fill,
+                      image: ExactAssetImage('assets/orange.png'),
+                    ),
+                  ),
+                ),
+                Container(
+                  width: 300,
+                  height: 500,
+                  padding: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      fit: BoxFit.fill,
+                      image: ExactAssetImage('assets/friends.png'),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ],
